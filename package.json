@@ -1,0 +1,17 @@
+{
+  "name": "mini-q-parameter-rfc-2231",
+  "version": "0.1.0",
+  "description": "Converts MIME header parameter values to and from RFC 2231 form.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
