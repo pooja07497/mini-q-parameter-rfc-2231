@@ -64,3 +64,10 @@ Returns an array of `[name, value]` pairs.  The `options` object may contain
 Takes a `Map` of parameter names to values and a parameter name.  Returns the
 decoded string, or `undefined` if the parameter is not present.  Throws if
 `params` is not a `Map` or if a percent escape is malformed.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
